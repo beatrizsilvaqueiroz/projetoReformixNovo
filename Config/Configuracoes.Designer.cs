@@ -104,7 +104,7 @@
             // cbNotificacoes
             // 
             this.cbNotificacoes.FormattingEnabled = true;
-            this.cbNotificacoes.Location = new System.Drawing.Point(102, 63);
+            this.cbNotificacoes.Location = new System.Drawing.Point(91, 62);
             this.cbNotificacoes.Name = "cbNotificacoes";
             this.cbNotificacoes.Size = new System.Drawing.Size(230, 21);
             this.cbNotificacoes.TabIndex = 1;
@@ -240,7 +240,7 @@
             // 
             // btnEditarPerfil
             // 
-            this.btnEditarPerfil.Location = new System.Drawing.Point(91, 74);
+            this.btnEditarPerfil.Location = new System.Drawing.Point(93, 75);
             this.btnEditarPerfil.Name = "btnEditarPerfil";
             this.btnEditarPerfil.Size = new System.Drawing.Size(230, 27);
             this.btnEditarPerfil.TabIndex = 2;
@@ -279,7 +279,7 @@
             this.lblConfiguracoes.TabIndex = 0;
             this.lblConfiguracoes.Text = "Configurações";
             // 
-            // Configuracoes
+            // TelaConfiguracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -289,7 +289,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.grpTema);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Configuracoes";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "TelaConfiguracoes";
             this.Text = "Configuracoes";
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

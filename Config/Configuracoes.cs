@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.TelaPerfil;
 using Reformix.Tema;
 
 namespace Reformix.Configuracoes
@@ -83,7 +84,6 @@ namespace Reformix.Configuracoes
 
         private void BtnPerfil_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Abrir a seção de perfil");
         }
 
         private void BtnHistorico_Click(object sender, EventArgs e)

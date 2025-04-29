@@ -59,6 +59,12 @@
     <Compile Include="Calculo Azulejo\CálculoAzulejo.Designer.cs">
       <DependentUpon>CálculoAzulejo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Criar Conta view\CriarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Criar Conta view\CriarConta.Designer.cs">
+      <DependentUpon>CriarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estimador de Tinta\EstimadorTinta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +77,26 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Historico view\Historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historico view\Historico.Designer.cs">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resetar Senha view\ResetarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resetar Senha view\ResetarSenha.Designer.cs">
+      <DependentUpon>ResetarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash Screen\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,17 +109,32 @@
     <Compile Include="Tela Principal\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="TelaPerfilView\TelaPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaPerfilView\TelaPerfil.Designer.cs">
+      <DependentUpon>TelaPerfil.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Config\Configuracoes.resx">
       <DependentUpon>Configuracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calculo Azulejo\CálculoAzulejo.resx">
       <DependentUpon>CálculoAzulejo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Criar Conta view\CriarConta.resx">
+      <DependentUpon>CriarConta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Estimador de Tinta\EstimadorTinta.resx">
       <DependentUpon>EstimadorTinta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historico view\Historico.resx">
+      <DependentUpon>Historico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,11 +146,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resetar Senha view\ResetarSenha.resx">
+      <DependentUpon>ResetarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash Screen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela Principal\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPerfilView\TelaPerfil.resx">
+      <DependentUpon>TelaPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,6 +186,8 @@
   <ItemGroup>
     <None Include="Resources\imagem logotipo %281%292.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\imagem logotipo %281%293.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,8 +10,9 @@ using System.Windows.Forms;
 using Reformix.Cálculo_Azulejo;
 using Reformix.Configuracoes;
 using Reformix.Estimador_de_Tinta;
+using Reformix.Login;
 
-    namespace Reformix.Tela_Principal
+namespace Reformix.Tela_Principal
     {
         public partial class TelaPrincipal : Form
         {
@@ -60,5 +61,11 @@ using Reformix.Estimador_de_Tinta;
             {
                 MessageBox.Show("A tela de login ainda está em desenvolvimento.", "Login");
             }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+            TelaLogin telaLogin = new TelaLogin();
+            telaLogin.ShowDialog();
         }
+    }
     }

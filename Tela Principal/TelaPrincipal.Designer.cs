@@ -94,7 +94,7 @@ namespace Reformix.Tela_Principal
             this.btnHistoricoCalculo.Name = "btnHistoricoCalculo";
             this.btnHistoricoCalculo.Size = new System.Drawing.Size(385, 60);
             this.btnHistoricoCalculo.TabIndex = 11;
-            this.btnHistoricoCalculo.Text = "Histórico de Calcúlo";
+            this.btnHistoricoCalculo.Text = "Histórico de Cálculo";
             this.btnHistoricoCalculo.UseVisualStyleBackColor = true;
             this.btnHistoricoCalculo.Click += new System.EventHandler(this.BtnHistoricoCalculo_Click);
             // 
@@ -180,6 +180,7 @@ namespace Reformix.Tela_Principal
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // pictureBox1
             // 

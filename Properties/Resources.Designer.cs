@@ -103,6 +103,16 @@ namespace Reformix.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagem_logotipo__1_3 {
+            get {
+                object obj = ResourceManager.GetObject("imagem logotipo (1)3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mídia {
             get {
                 object obj = ResourceManager.GetObject("Mídia", resourceCulture);
