@@ -92,6 +92,7 @@
             this.btnCriarConta.TabIndex = 3;
             this.btnCriarConta.Text = "Criar conta";
             this.btnCriarConta.UseVisualStyleBackColor = true;
+            this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click_1);
             // 
             // groupBox2
             // 

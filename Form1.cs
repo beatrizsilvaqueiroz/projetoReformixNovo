@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.Services;
 
 namespace Reformix
 {
@@ -15,6 +16,7 @@ namespace Reformix
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += CloseEntireApplication.CloseApplication;
         }
 
         private void btnComecar_Click(object sender, EventArgs e)

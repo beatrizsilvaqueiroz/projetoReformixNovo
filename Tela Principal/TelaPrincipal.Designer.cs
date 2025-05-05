@@ -32,7 +32,6 @@ namespace Reformix.Tela_Principal
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEstimadorTinta = new System.Windows.Forms.Button();
-            this.btnConfiguracoes = new System.Windows.Forms.Button();
             this.btnHistoricoCalculo = new System.Windows.Forms.Button();
             this.btnCalculoAzulejo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@ namespace Reformix.Tela_Principal
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.btnEstimadorTinta);
-            this.panel1.Controls.Add(this.btnConfiguracoes);
             this.panel1.Controls.Add(this.btnHistoricoCalculo);
             this.panel1.Controls.Add(this.btnCalculoAzulejo);
             this.panel1.Controls.Add(this.label5);
@@ -68,7 +66,7 @@ namespace Reformix.Tela_Principal
             // btnEstimadorTinta
             // 
             this.btnEstimadorTinta.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstimadorTinta.Location = new System.Drawing.Point(17, 354);
+            this.btnEstimadorTinta.Location = new System.Drawing.Point(26, 362);
             this.btnEstimadorTinta.Name = "btnEstimadorTinta";
             this.btnEstimadorTinta.Size = new System.Drawing.Size(385, 60);
             this.btnEstimadorTinta.TabIndex = 13;
@@ -76,21 +74,10 @@ namespace Reformix.Tela_Principal
             this.btnEstimadorTinta.UseVisualStyleBackColor = true;
             this.btnEstimadorTinta.Click += new System.EventHandler(this.BtnEstimadorTinta_Click);
             // 
-            // btnConfiguracoes
-            // 
-            this.btnConfiguracoes.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracoes.Location = new System.Drawing.Point(17, 486);
-            this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(385, 60);
-            this.btnConfiguracoes.TabIndex = 12;
-            this.btnConfiguracoes.Text = "Configurações";
-            this.btnConfiguracoes.UseVisualStyleBackColor = true;
-            this.btnConfiguracoes.Click += new System.EventHandler(this.BtnConfiguracoes_Click);
-            // 
             // btnHistoricoCalculo
             // 
             this.btnHistoricoCalculo.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistoricoCalculo.Location = new System.Drawing.Point(17, 420);
+            this.btnHistoricoCalculo.Location = new System.Drawing.Point(26, 428);
             this.btnHistoricoCalculo.Name = "btnHistoricoCalculo";
             this.btnHistoricoCalculo.Size = new System.Drawing.Size(385, 60);
             this.btnHistoricoCalculo.TabIndex = 11;
@@ -101,7 +88,7 @@ namespace Reformix.Tela_Principal
             // btnCalculoAzulejo
             // 
             this.btnCalculoAzulejo.Font = new System.Drawing.Font("Lucida Fax", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculoAzulejo.Location = new System.Drawing.Point(17, 288);
+            this.btnCalculoAzulejo.Location = new System.Drawing.Point(26, 296);
             this.btnCalculoAzulejo.Name = "btnCalculoAzulejo";
             this.btnCalculoAzulejo.Size = new System.Drawing.Size(385, 60);
             this.btnCalculoAzulejo.TabIndex = 10;
@@ -151,7 +138,6 @@ namespace Reformix.Tela_Principal
             // 
             // groupBox1
             // 
-            this.groupBox1.BackgroundImage = global::Reformix.Properties.Resources.imagem_logotipo__1_1;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -165,7 +151,7 @@ namespace Reformix.Tela_Principal
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(97, 27);
+            this.label1.Location = new System.Drawing.Point(85, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 25);
             this.label1.TabIndex = 4;
@@ -184,11 +170,10 @@ namespace Reformix.Tela_Principal
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Reformix.Properties.Resources.imagem_logotipo__1_2;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(3, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 55);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -202,6 +187,7 @@ namespace Reformix.Tela_Principal
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "TelaPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaPrincipal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -224,7 +210,6 @@ namespace Reformix.Tela_Principal
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEstimadorTinta;
-        private System.Windows.Forms.Button btnConfiguracoes;
         private System.Windows.Forms.Button btnHistoricoCalculo;
         private System.Windows.Forms.Button btnCalculoAzulejo;
     }

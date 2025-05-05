@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Reformix.Cálculo_Azulejo;
-using Reformix.Configuracoes;
 using Reformix.Estimador_de_Tinta;
 using Reformix.Login;
+using Reformix.Services;
 
 namespace Reformix.Tela_Principal
     {
@@ -19,7 +19,7 @@ namespace Reformix.Tela_Principal
             public TelaPrincipal()
             {
                 InitializeComponent();
-            this.FormClosing += CloseApp;
+            this.FormClosing += CloseEntireApplication.CloseApplication;
 
             }
 
@@ -50,12 +50,7 @@ namespace Reformix.Tela_Principal
                 MessageBox.Show("O Histórico de Cálculo ainda está em desenvolvimento.", "Em breve");
             }
 
-            private void BtnConfiguracoes_Click(object sender, EventArgs e)
-            {
-
-                TelaConfiguracoes telaConfiguracoes = new TelaConfiguracoes();
-            telaConfiguracoes.ShowDialog();
-            }
+           
 
             private void BtnLogin_Click(object sender, EventArgs e)
             {

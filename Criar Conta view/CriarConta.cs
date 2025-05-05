@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.Controller;
+using Reformix.Models;
+using Reformix.Repositorio;
+using Reformix.Services;
 
 namespace Reformix.Criar_Conta_view
 
@@ -15,31 +19,39 @@ namespace Reformix.Criar_Conta_view
     public partial class CriarConta : Form
 
     {
+        private UsuarioController _usuarioController;
+        private UsuarioRepositorio _usuarioRepositorio;
+        private DatabaseService _databaseService;
+
+
 
         public CriarConta()
 
         {
 
             InitializeComponent();
+            
 
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
 
         {
+            _databaseService = new DatabaseService();
+            _usuarioRepositorio = new UsuarioRepositorio(_databaseService);
+            _usuarioController = new UsuarioController(_usuarioRepositorio);
 
-            string usuario = txtUsuario.Text.Trim();
+            Usuario usuario = new Usuario();
+            usuario.Nome = txtNomeUsuario.Text;
+            usuario.Email = txtEmail.Text;
+            usuario.SenhaHash = txtSenha.Text;
+            usuario.Telefone = mtbTelefone.Text;
+                       
 
-            string email = txtEmail.Text.Trim();
 
-            string senha = txtSenha.Text;
+            if (string.IsNullOrEmpty(usuario.Email) || string.IsNullOrEmpty(usuario.SenhaHash) ||
 
-            string telefone = mtbTelefone.Text.Trim();
-
-
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(email) ||
-
-                string.IsNullOrEmpty(senha) || !mtbTelefone.MaskFull)
+                string.IsNullOrEmpty(usuario.Nome) || !mtbTelefone.MaskFull)
 
             {
 
@@ -51,7 +63,7 @@ namespace Reformix.Criar_Conta_view
 
             }
 
-            if (!email.Contains("@") || !email.Contains("."))
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
 
             {
 
@@ -61,12 +73,10 @@ namespace Reformix.Criar_Conta_view
 
             }
 
-            MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso",
+            //_usuarioController.CriarUsuario(usuario);
 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-            txtUsuario.Clear();
+            
+            txtNomeUsuario.Clear();
 
             txtEmail.Clear();
 

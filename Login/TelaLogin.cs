@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.Criar_Conta_view;
 
 namespace Reformix.Login
 
@@ -67,6 +68,12 @@ namespace Reformix.Login
 
         }
 
+        private void btnCriarConta_Click_1(object sender, EventArgs e)
+        {
+            CriarConta criarConta = new CriarConta();
+            this.Close();
+            criarConta.ShowDialog();
+        }
     }
 
 }
