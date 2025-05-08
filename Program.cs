@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Reformix.Criar_Conta_view;
+using Reformix.Splash_Screen;
 
 namespace Reformix
 {
@@ -18,7 +19,7 @@ namespace Reformix
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Reformix.Splash_Screen.SplashScreen());
-            Application.Run(new CriarConta());
+            Application.Run(new SplashScreen());
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEsqueceuSenha = new System.Windows.Forms.Button();
+            this.btnExcluirConta = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnCriarConta = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -49,7 +49,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.btnEsqueceuSenha);
+            this.groupBox1.Controls.Add(this.btnExcluirConta);
             this.groupBox1.Controls.Add(this.lblLogin);
             this.groupBox1.Controls.Add(this.btnCriarConta);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -61,15 +61,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // btnEsqueceuSenha
+            // btnExcluirConta
             // 
-            this.btnEsqueceuSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEsqueceuSenha.Location = new System.Drawing.Point(229, 540);
-            this.btnEsqueceuSenha.Name = "btnEsqueceuSenha";
-            this.btnEsqueceuSenha.Size = new System.Drawing.Size(155, 38);
-            this.btnEsqueceuSenha.TabIndex = 5;
-            this.btnEsqueceuSenha.Text = "Esqueceu sua senha?";
-            this.btnEsqueceuSenha.UseVisualStyleBackColor = true;
+            this.btnExcluirConta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirConta.Location = new System.Drawing.Point(229, 540);
+            this.btnExcluirConta.Name = "btnExcluirConta";
+            this.btnExcluirConta.Size = new System.Drawing.Size(155, 38);
+            this.btnExcluirConta.TabIndex = 5;
+            this.btnExcluirConta.Text = "Excluir conta";
+            this.btnExcluirConta.UseVisualStyleBackColor = true;
+            this.btnExcluirConta.Click += new System.EventHandler(this.btnEsqueceuSenha_Click_1);
             // 
             // lblLogin
             // 
@@ -127,6 +128,7 @@
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
             // 
             // lblSenha
             // 
@@ -186,6 +188,7 @@
             this.MaximizeBox = false;
             this.Name = "TelaLogin";
             this.Text = "TelaLogin";
+            this.Load += new System.EventHandler(this.TelaLogin_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -205,7 +208,7 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Button btnEsqueceuSenha;
+        private System.Windows.Forms.Button btnExcluirConta;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Button btnCriarConta;
         private System.Windows.Forms.TextBox txtSenha;

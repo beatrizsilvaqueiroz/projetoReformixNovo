@@ -8,14 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.Models;
+using Reformix.Repositorio;
+using Reformix.Services;
 
 namespace Reformix.Cálculo_Azulejo
 {
     public partial class CalculoAzulejo : Form
     {
+        private HistoricoRepositorio historicoRepositorio;
         public CalculoAzulejo()
         {
             InitializeComponent();
+            historicoRepositorio = new HistoricoRepositorio(new DatabaseService());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,6 +46,8 @@ namespace Reformix.Cálculo_Azulejo
 
                 lblResult.Text = $"Área da parede: {areaParede:F2} m²\n" +
                                  $"Azulejos necessários (com 10% extra): {quantidadeFinal}";
+                lblResult.Visible = false;
+                MessageBox.Show(lblResult.Text);
             }
             catch (FormatException)
             {
@@ -72,6 +79,43 @@ namespace Reformix.Cálculo_Azulejo
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Calculo calculo = new Calculo();
+
+            calculo.Operacao = "Cálculo de azulejos";
+            calculo.MaterialNecessario = $"{lblResult.Text} azulejos";
+
+           bool resultadoRegistro = historicoRepositorio.RegistrarCalculo(calculo);
+
+            if (resultadoRegistro) {
+
+                MessageBox.Show("Cálculo registrado com sucesso!");
+                return;
+            
+            }
+            MessageBox.Show("Cálculo não registrado");
+            return;
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CalculoAzulejo_Load(object sender, EventArgs e)
+        {
+            if (SessaoUsuarioLogado._usuarioLogado == null)
+            {
+                button2.Visible = false;
+            }
         }
     }
 }

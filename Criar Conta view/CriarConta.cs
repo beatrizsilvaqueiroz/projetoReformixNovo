@@ -30,17 +30,17 @@ namespace Reformix.Criar_Conta_view
         {
 
             InitializeComponent();
-            
+            _databaseService = new DatabaseService();
+            _usuarioRepositorio = new UsuarioRepositorio(_databaseService);
+            _usuarioController = new UsuarioController(_usuarioRepositorio);
+
 
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
 
         {
-            _databaseService = new DatabaseService();
-            _usuarioRepositorio = new UsuarioRepositorio(_databaseService);
-            _usuarioController = new UsuarioController(_usuarioRepositorio);
-
+            
             Usuario usuario = new Usuario();
             usuario.Nome = txtNomeUsuario.Text;
             usuario.Email = txtEmail.Text;
@@ -73,7 +73,7 @@ namespace Reformix.Criar_Conta_view
 
             }
 
-            //_usuarioController.CriarUsuario(usuario);
+            _usuarioController.CriarUsuario(usuario);
 
             
             txtNomeUsuario.Clear();

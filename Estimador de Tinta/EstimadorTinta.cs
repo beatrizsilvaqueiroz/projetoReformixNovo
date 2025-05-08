@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Reformix.Models;
+using Reformix.Repositorio;
+using Reformix.Services;
 
 namespace Reformix.Estimador_de_Tinta
 {
     public partial class EstimadorTinta : Form
     {
+        private HistoricoRepositorio historicoRepositorio;
         public EstimadorTinta()
         {
             InitializeComponent();
+            historicoRepositorio = new HistoricoRepositorio(new DatabaseService());
+
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -28,6 +34,8 @@ namespace Reformix.Estimador_de_Tinta
                 double quantidadeTinta = (area * demaos) / cobertura;
 
                 lblResultado.Text = $"Quantidade estimada de tinta: {quantidadeTinta:F2} litros";
+                lblResultado.Visible = false;
+                MessageBox.Show(lblResultado.Text);
             }
             catch (FormatException)
             {
@@ -47,6 +55,34 @@ namespace Reformix.Estimador_de_Tinta
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            Calculo calculo = new Calculo();
+
+            calculo.Operacao = "Estimativa de tinta";
+            calculo.MaterialNecessario = $"{lblResultado.Text}";
+
+            bool resultadoRegistro = historicoRepositorio.RegistrarCalculo(calculo);
+
+            if (resultadoRegistro)
+            {
+
+                MessageBox.Show("Cálculo registrado com sucesso!");
+                return;
+
+            }
+            MessageBox.Show("Cálculo não registrado");
+            return;
+        }
+
+        private void EstimadorTinta_Load(object sender, EventArgs e)
+        {
+            if (SessaoUsuarioLogado._usuarioLogado == null)
+            {
+                btnSalvar.Visible = false;
+            }
         }
     }
 }

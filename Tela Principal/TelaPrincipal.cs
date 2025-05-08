@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Reformix.Cálculo_Azulejo;
 using Reformix.Estimador_de_Tinta;
+using Reformix.Historico_view;
 using Reformix.Login;
 using Reformix.Services;
 
@@ -47,7 +48,8 @@ namespace Reformix.Tela_Principal
 
             private void BtnHistoricoCalculo_Click(object sender, EventArgs e)
             {
-                MessageBox.Show("O Histórico de Cálculo ainda está em desenvolvimento.", "Em breve");
+                Historico historico = new Historico();
+            historico.ShowDialog();
             }
 
            

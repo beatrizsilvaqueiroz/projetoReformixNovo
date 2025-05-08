@@ -37,6 +37,27 @@ namespace Reformix.Controller
 
             return false;
         
+        } 
+        
+        public bool ExcluirConta(Usuario usuario) {
+
+          bool resultadoExclusao = usuarioRepositorio.deletarUsuario(usuario);
+
+            if (resultadoExclusao)
+            {
+                MessageBox.Show("Conta excluída com sucesso");
+                return true;
+
+            }
+            else {
+
+                MessageBox.Show("Erro na exclusão do usuário");
+
+
+            }
+
+            return false;
+        
         }
 
     }
