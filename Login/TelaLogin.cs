@@ -12,6 +12,7 @@ using Reformix.Criar_Conta_view;
 using Reformix.Models;
 using Reformix.Repositorio;
 using Reformix.Services;
+using Reformix.Tela_Principal;
 
 namespace Reformix.Login
 
@@ -22,8 +23,9 @@ namespace Reformix.Login
     {
         AuthService authService;
        private UsuarioController usuarioController;
+        private TelaPrincipal _form;
 
-        public TelaLogin()
+        public TelaLogin(TelaPrincipal form)
 
         {
 
@@ -31,7 +33,7 @@ namespace Reformix.Login
             DatabaseService databaseService = new DatabaseService();
             authService = new AuthService(databaseService);
             usuarioController = new UsuarioController(new UsuarioRepositorio(databaseService));
-
+            this._form = form;
         }
 
         private void lblLogin_Click(object sender, EventArgs e)
@@ -86,6 +88,7 @@ namespace Reformix.Login
             }
 
             SessaoUsuarioLogado.RegistrarUsuarioLogado(usuario);
+            _form.ShowButtonHistorico();
 
             MessageBox.Show($"Login realizado! Olá {usuario.Nome}");
             this.Close();

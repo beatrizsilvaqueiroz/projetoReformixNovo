@@ -53,6 +53,29 @@ namespace Reformix.Historico_view
         {
 
         }
+
+        private void btnLimparHistorico_Click_1(object sender, EventArgs e)
+        {
+          DialogResult  resultado =  MessageBox.Show("Deseja apagar todos os cálculos?", "Deletar Cálculos", MessageBoxButtons.YesNo);
+
+            if (resultado == DialogResult.Yes)
+            {
+
+                historicoRepositorio.deletarTodosCalculos();
+                dataGridView1.DataSource = null;
+
+            }
+            else {
+
+                return;
+            
+            }
+            
+            
+
+            
+
+        }
     }
 }
 

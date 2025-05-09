@@ -10,6 +10,8 @@ namespace Reformix.Models
     {
         public Calculo() { }
 
+        public DateTime Data { get; set; }
+        public string Ambiente { get; set; }
         public string Operacao { get; set; }
         public string MaterialNecessario { get; set; }
     }

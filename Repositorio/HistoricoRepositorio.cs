@@ -21,13 +21,14 @@ namespace Reformix.Repositorio
         public bool RegistrarCalculo(Calculo calculo)
         {
 
-            string query = @"INSERT INTO historicooperacoes (UsuarioID, Operacao, material_necessario)
-                             VALUES (@UsuarioID, @Operacao, @material_necessario)";
+            string query = @"INSERT INTO historicooperacoes (UsuarioID, Operacao, material_necessario, ambiente)
+                             VALUES (@UsuarioID, @Operacao, @material_necessario, @Ambiente)";
 
 
 
             MySqlParameter[] parameters = {
 
+                new MySqlParameter("@Ambiente", calculo.Ambiente),
                 new MySqlParameter("@UsuarioID", SessaoUsuarioLogado._usuarioLogado.UsuarioID),
                 new MySqlParameter("@Operacao", calculo.Operacao),
                 new MySqlParameter("@material_necessario", calculo.MaterialNecessario),
@@ -71,6 +72,8 @@ namespace Reformix.Repositorio
                     while (respostaBanco.Read())
                     {
                         Calculo calculo = new Calculo();
+                        calculo.Data = Convert.ToDateTime(respostaBanco["data"]);
+                        calculo.Ambiente = respostaBanco["ambiente"].ToString();
                         calculo.Operacao = respostaBanco["Operacao"].ToString();
                         calculo.MaterialNecessario = respostaBanco["material_necessario"].ToString();
 
@@ -85,6 +88,25 @@ namespace Reformix.Repositorio
             catch (Exception ex)
             {
                 throw new Exception("Erro durante autenticação: " + ex.Message);
+            }
+        }
+
+
+        public bool deletarTodosCalculos()
+        {
+            
+            try
+            {
+                string query = "DELETE FROM historicooperacoes";
+
+                var respostaBanco = databaseService.ExecuteNonQuery(query);
+
+                return respostaBanco > 0;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro durante o delete: " + ex.Message);
             }
         }
 

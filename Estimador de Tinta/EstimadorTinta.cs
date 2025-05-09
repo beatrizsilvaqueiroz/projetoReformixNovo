@@ -27,6 +27,12 @@ namespace Reformix.Estimador_de_Tinta
         {
             try
             {
+                if (string.IsNullOrEmpty(txtAmbiente.Text))
+                {
+                    MessageBox.Show("Você precisa informar o ambiente");
+                    return;
+                    
+                }
                 double area = double.Parse(txtAreaParede.Text);
                 int demaos = int.Parse(txtDemao.Text);
                 double cobertura = double.Parse(txtCoberturaTinta.Text);
@@ -36,6 +42,12 @@ namespace Reformix.Estimador_de_Tinta
                 lblResultado.Text = $"Quantidade estimada de tinta: {quantidadeTinta:F2} litros";
                 lblResultado.Visible = false;
                 MessageBox.Show(lblResultado.Text);
+
+                if (SessaoUsuarioLogado._usuarioLogado != null)
+                {
+                    btnSalvar.Visible = true;
+                }
+
             }
             catch (FormatException)
             {
@@ -61,6 +73,8 @@ namespace Reformix.Estimador_de_Tinta
         {
             Calculo calculo = new Calculo();
 
+            calculo.Data = DateTime.Now;
+            calculo.Ambiente = txtAmbiente.Text;
             calculo.Operacao = "Estimativa de tinta";
             calculo.MaterialNecessario = $"{lblResultado.Text}";
 
@@ -79,10 +93,17 @@ namespace Reformix.Estimador_de_Tinta
 
         private void EstimadorTinta_Load(object sender, EventArgs e)
         {
+            btnSalvar.Visible = false;
+
             if (SessaoUsuarioLogado._usuarioLogado == null)
             {
                 btnSalvar.Visible = false;
             }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

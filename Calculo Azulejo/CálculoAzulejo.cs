@@ -25,8 +25,16 @@ namespace Reformix.Cálculo_Azulejo
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             try
             {
+
+                if (string.IsNullOrEmpty(txtAmbiente.Text))
+                {
+                    MessageBox.Show("Digite o nome do ambiente");
+                    return;
+                }
+
                 double paredeAltura = double.Parse(txtParedeAltura.Text.Replace(",", "."), CultureInfo.InvariantCulture);
                 double paredeLargura = double.Parse(txtParedeLargura.Text.Replace(",", "."), CultureInfo.InvariantCulture);
                 double azulejoAltura = double.Parse(txtAzulejoAltura.Text.Replace(",", "."), CultureInfo.InvariantCulture);
@@ -48,6 +56,13 @@ namespace Reformix.Cálculo_Azulejo
                                  $"Azulejos necessários (com 10% extra): {quantidadeFinal}";
                 lblResult.Visible = false;
                 MessageBox.Show(lblResult.Text);
+
+                if (SessaoUsuarioLogado._usuarioLogado != null)
+                {
+                    button2.Visible = true;
+                }
+
+                
             }
             catch (FormatException)
             {
@@ -89,7 +104,8 @@ namespace Reformix.Cálculo_Azulejo
         private void button2_Click(object sender, EventArgs e)
         {
             Calculo calculo = new Calculo();
-
+            calculo.Data = DateTime.Now;
+            calculo.Ambiente = txtAmbiente.Text;
             calculo.Operacao = "Cálculo de azulejos";
             calculo.MaterialNecessario = $"{lblResult.Text} azulejos";
 
@@ -98,6 +114,7 @@ namespace Reformix.Cálculo_Azulejo
             if (resultadoRegistro) {
 
                 MessageBox.Show("Cálculo registrado com sucesso!");
+                button2.Visible=false;
                 return;
             
             }
@@ -112,10 +129,16 @@ namespace Reformix.Cálculo_Azulejo
 
         private void CalculoAzulejo_Load(object sender, EventArgs e)
         {
+            button2.Visible = false;
             if (SessaoUsuarioLogado._usuarioLogado == null)
             {
                 button2.Visible = false;
             }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

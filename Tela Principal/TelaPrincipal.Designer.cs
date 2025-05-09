@@ -42,6 +42,7 @@ namespace Reformix.Tela_Principal
             this.label1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nameLogado = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -138,6 +139,7 @@ namespace Reformix.Tela_Principal
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.nameLogado);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -177,6 +179,16 @@ namespace Reformix.Tela_Principal
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // nameLogado
+            // 
+            this.nameLogado.AutoSize = true;
+            this.nameLogado.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLogado.Location = new System.Drawing.Point(264, 21);
+            this.nameLogado.Name = "nameLogado";
+            this.nameLogado.Size = new System.Drawing.Size(68, 30);
+            this.nameLogado.TabIndex = 14;
+            this.nameLogado.Text = "nome";
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +201,7 @@ namespace Reformix.Tela_Principal
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaPrincipal";
+            this.Load += new System.EventHandler(this.TelaPrincipal_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -210,7 +223,8 @@ namespace Reformix.Tela_Principal
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnEstimadorTinta;
-        private System.Windows.Forms.Button btnHistoricoCalculo;
         private System.Windows.Forms.Button btnCalculoAzulejo;
+        public Button btnHistoricoCalculo;
+        private Label nameLogado;
     }
 }

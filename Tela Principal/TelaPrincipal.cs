@@ -26,8 +26,8 @@ namespace Reformix.Tela_Principal
 
             private void TelaPrincipal_Load(object sender, EventArgs e)
             {
-               
-            }
+            
+                    }
         
             private void CloseApp(object sender, FormClosingEventArgs e)
             {
@@ -61,8 +61,30 @@ namespace Reformix.Tela_Principal
 
         private void btnLogin_Click_1(object sender, EventArgs e)
         {
-            TelaLogin telaLogin = new TelaLogin();
+            TelaLogin telaLogin = new TelaLogin(this);
             telaLogin.ShowDialog();
+        }
+
+        private void TelaPrincipal_Load_1(object sender, EventArgs e)
+        {
+            btnLogin.Visible = false;
+            nameLogado.Visible = false;
+
+            if (SessaoUsuarioLogado._usuarioLogado == null)
+            {
+                btnHistoricoCalculo.Visible = false;
+                btnLogin.Visible = true;
+
+            }
+        }
+
+        public void ShowButtonHistorico()
+        {
+            btnHistoricoCalculo.Visible = true;
+            btnLogin.Visible = false;
+            nameLogado.Text = SessaoUsuarioLogado._usuarioLogado.Nome;
+            nameLogado.Visible = true;
+
         }
     }
     }
