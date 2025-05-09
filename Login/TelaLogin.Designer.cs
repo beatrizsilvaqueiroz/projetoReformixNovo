@@ -63,36 +63,39 @@
             // 
             // btnExcluirConta
             // 
+            this.btnExcluirConta.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnExcluirConta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirConta.ForeColor = System.Drawing.Color.White;
             this.btnExcluirConta.Location = new System.Drawing.Point(229, 540);
             this.btnExcluirConta.Name = "btnExcluirConta";
             this.btnExcluirConta.Size = new System.Drawing.Size(155, 38);
             this.btnExcluirConta.TabIndex = 5;
             this.btnExcluirConta.Text = "Excluir conta";
-            this.btnExcluirConta.UseVisualStyleBackColor = true;
+            this.btnExcluirConta.UseVisualStyleBackColor = false;
             this.btnExcluirConta.Click += new System.EventHandler(this.btnEsqueceuSenha_Click_1);
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Nirmala Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Lucida Fax", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.Location = new System.Drawing.Point(168, 162);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(89, 37);
+            this.lblLogin.Size = new System.Drawing.Size(94, 32);
             this.lblLogin.TabIndex = 4;
             this.lblLogin.Text = "Login";
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // btnCriarConta
             // 
+            this.btnCriarConta.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnCriarConta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCriarConta.ForeColor = System.Drawing.Color.Black;
-            this.btnCriarConta.Location = new System.Drawing.Point(49, 540);
+            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
+            this.btnCriarConta.Location = new System.Drawing.Point(83, 540);
             this.btnCriarConta.Name = "btnCriarConta";
             this.btnCriarConta.Size = new System.Drawing.Size(134, 38);
             this.btnCriarConta.TabIndex = 3;
             this.btnCriarConta.Text = "Criar conta";
-            this.btnCriarConta.UseVisualStyleBackColor = true;
+            this.btnCriarConta.UseVisualStyleBackColor = false;
             this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click_1);
             // 
             // groupBox2
@@ -102,9 +105,9 @@
             this.groupBox2.Controls.Add(this.lblSenha);
             this.groupBox2.Controls.Add(this.txtEmail);
             this.groupBox2.Controls.Add(this.lblEmail);
-            this.groupBox2.Location = new System.Drawing.Point(31, 222);
+            this.groupBox2.Location = new System.Drawing.Point(26, 215);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(370, 282);
+            this.groupBox2.Size = new System.Drawing.Size(383, 289);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -134,11 +137,11 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(22, 101);
+            this.lblSenha.Location = new System.Drawing.Point(22, 111);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(45, 17);
+            this.lblSenha.Size = new System.Drawing.Size(49, 17);
             this.lblSenha.TabIndex = 2;
-            this.lblSenha.Text = "Senha";
+            this.lblSenha.Text = "Senha:";
             // 
             // txtEmail
             // 
@@ -151,11 +154,11 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(21, 31);
+            this.lblEmail.Location = new System.Drawing.Point(21, 37);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(47, 17);
+            this.lblEmail.Size = new System.Drawing.Size(51, 17);
             this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "E-mail";
+            this.lblEmail.Text = "E-mail:";
             // 
             // lblTitulo
             // 

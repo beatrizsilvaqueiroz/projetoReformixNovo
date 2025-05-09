@@ -61,7 +61,7 @@ namespace Reformix.Repositorio
                 var parameters = new MySqlParameter[]
                 {
 
-                    new MySqlParameter("@UsuarioID", 4),
+                    new MySqlParameter("@UsuarioID", SessaoUsuarioLogado._usuarioLogado.UsuarioID),
                     //new MySqlParameter("@UsuarioID", SessaoUsuarioLogado._usuarioLogado.UsuarioID),
 
 

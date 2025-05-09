@@ -84,6 +84,7 @@ namespace Reformix.Estimador_de_Tinta
             {
 
                 MessageBox.Show("Cálculo registrado com sucesso!");
+                btnSalvar.Visible=false;
                 return;
 
             }

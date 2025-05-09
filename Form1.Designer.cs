@@ -62,9 +62,9 @@
             this.btnComecar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnComecar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComecar.ForeColor = System.Drawing.Color.White;
-            this.btnComecar.Location = new System.Drawing.Point(88, 453);
+            this.btnComecar.Location = new System.Drawing.Point(86, 453);
             this.btnComecar.Name = "btnComecar";
-            this.btnComecar.Size = new System.Drawing.Size(250, 53);
+            this.btnComecar.Size = new System.Drawing.Size(268, 59);
             this.btnComecar.TabIndex = 6;
             this.btnComecar.Text = "COMEÇAR";
             this.btnComecar.UseVisualStyleBackColor = false;
@@ -73,20 +73,20 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(40, 374);
+            this.label5.Font = new System.Drawing.Font("Nirmala Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 374);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(339, 30);
+            this.label5.Size = new System.Drawing.Size(389, 32);
             this.label5.TabIndex = 5;
             this.label5.Text = "reformas e projetos com facilidade.\r\n";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala Text", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 344);
+            this.label4.Font = new System.Drawing.Font("Nirmala Text", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(68, 341);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(268, 30);
+            this.label4.Size = new System.Drawing.Size(308, 32);
             this.label4.TabIndex = 4;
             this.label4.Text = "Organize e simplifique suas";
             // 
@@ -113,10 +113,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala Text", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 108);
+            this.label1.Font = new System.Drawing.Font("Nirmala Text", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(158, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 40);
+            this.label1.Size = new System.Drawing.Size(198, 47);
             this.label1.TabIndex = 1;
             this.label1.Text = "REFORMIX";
             // 
@@ -124,9 +124,9 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 82);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(167, 227);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -137,7 +137,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(459, 640);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
